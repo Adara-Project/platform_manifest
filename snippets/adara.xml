@@ -3,6 +3,10 @@
   <remote name="github/Adara"
           fetch="https://github.com/Project-Adara"
           revision="refs/heads/R" />
+  
+  <remote name="github/Adara-Devices"
+          fetch="https://github.com/Project-Adara-Devices"
+          revision="refs/heads/R" />
 
   <project path="build/make" name="android_build" groups="pdk" remote="github/Adara" >
     <copyfile src="core/root.mk" dest="Makefile" />
