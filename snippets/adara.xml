@@ -21,6 +21,6 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="bionic" name="bionic" remote="github/Adara" />
+  <project path="bionic" name="android_bionic" remote="github/Adara" />
 
 </manifest>
