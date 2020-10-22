@@ -10,7 +10,7 @@
           revision="refs/heads/R" />
 
   <!-- Build -->
-  <project path="build/make" name="android_build" groups="pdk" remote="github/Adara" >
+  <project path="build/make" name="platform_build" groups="pdk" remote="github/Adara" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -19,18 +19,65 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/blueprint" name="android_build_blueprint" remote="github/Adara" />
-  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="github/Adara" >
+  <project path="build/blueprint" name="platform_build_blueprint" remote="github/Adara" />
+  <project path="build/soong" name="platform_build_soong" groups="pdk,tradefed" remote="github/Adara" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- Android Standart -->
-  <project path="art" name="android_art" remote="github/Adara" />
-  <project path="bionic" name="android_bionic" remote="github/Adara" />
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="github/Adara" />
+  <project path="art" name="platform_art" remote="github/Adara" />
+  <project path="bionic" name="platform_bionic" remote="github/Adara" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="github/Adara" />
+
+  <!-- Android System -->
+  <project path="system/core" name="platform_system_core" remote="github/Adara" />
+  <project path="system/bt" name="platform_system_bt" remote="github/Adara" />
+  <project path="system/sepolicy" name="platform_system_sepolicy" remote="github/Adara" />
+  <project path="system/qcom" name="platform_system_qcom" remote="github/Adara" />
+  <project path="system/libufdt" name="platform_system_libufdt" remote="github/Adara" />
+  <project path="system/tools/mkbootimg" name="platform_system_tools_mkbootimg" remote="github/Adara" />
+  <project path="system/incremental_delivery" name="platform_system_incremental_delivery" remote="github/Adara" />
+
+  <!-- Android Frameworks -->
+  <project path="frameworks/base" name="platform_frameworks_base" remote="github/Adara" />
+  <project path="frameworks/av" name="platform_frameworks_av" remote="github/Adara" />
+  <project path="frameworks/native" name="platform_frameworks_native" remote="github/Adara" />
+  <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="github/Adara" />
 
   <!-- Android Vendor -->
-  <project path="vendor/adara" name="android_vendor_adara" remote="github/Adara" />
+  <project path="vendor/adara" name="platform_vendor_adara" remote="github/Adara" />
+  <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom_opensource_dataservices" remote="github/Adara"/>
+
+  <!-- Android Hardware -->
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="github/Adara" />
+  <project path="hardware/adara/interfaces" name="platform_hardware_adara_interfaces" remote="github/Adara" />
+
+  <!-- Android Prebuilts -->
+  <project path="prebuilts/abi-dumps/vndk" name="platform_prebuilts_abi-dumps_vndk" remote="github/Adara" />
+
+  <!-- Android Device -->
+  <project path="device/adara/sepolicy" name="platform_device_adara_sepolicy" remote="github/Adara" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="github/Adara" />
+  <project path="device/qcom/sepolicy-legacy" name="platform_device_qcom_sepolicy-legacy" remote="github/Adara" />
+  <project path="device/qcom/sepolicy-legacy-um" name="platform_device_qcom_sepolicy-legacy-um" remote="github/Adara" />
+
+  <!-- Android External -->
+  <project path="external/json-c" name="platform_external_json-c" remote="github/Adara" />
+  <project path="external/selinux" name="platform_external_selinux" remote="github/Adara" />
+  <project path="external/tinycompress" name="platform_external_tinycompress" remote="github/Adara" />
+
+  <!-- Android Apps -->
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" remote="github/Adara" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" remote="github/Adara" />
+  <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" remote="github/Adara" />
+
+
+  <!-- Android Tools -->
+  <project path="tools/metalava" name="platform_tools_metalava" remote="github/Adara" />
+
+  <!-- Android Services -->
+  <project path="packages/services/Telephony" name="platform_packages_services_Telephony" remote="github/Adara" />
+  <project path="packages/services/Telecomm" name="platform_packages_services_Telecomm" remote="github/Adara" />
 
 </manifest>
